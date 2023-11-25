@@ -23,5 +23,4 @@ Step 2: robot --exclude fail -d Results Tests
 I exclude the fail because 1 test will crash the The Oppenheimer Project.
 This case attempted to insert a hero without gender via REST API POST call, 
 the return was 202, payload was inserted. When load the landing page, it has ERROR. 
-See Link.
-
+See Link. https://youtu.be/LUHdXn8R-6M
