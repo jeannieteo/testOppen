@@ -1,0 +1,3105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20231125 20:06:24.133" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\jeann\PycharmProjects\testOppen\Tests">
+<suite id="s1-s1" name="TestOppenStory1" source="C:\Users\jeann\PycharmProjects\testOppen\Tests\TestOppenStory1.robot">
+<test id="s1-s1-t1" name="Clerk should be able to insert 1 working class hero" line="9">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:06:24.658" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:06:24.658" endtime="20231125 20:06:28.674"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:24.657" endtime="20231125 20:06:28.674"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:28.675" endtime="20231125 20:06:28.692"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:28.675" endtime="20231125 20:06:28.692"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:24.657" endtime="20231125 20:06:28.692"/>
+</kw>
+<kw name="Navigate to SwaggerUI" library="Oppen">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Visit Swagger</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:28.693" level="INFO">Clicking link 'Visit Swagger'.</msg>
+<status status="PASS" starttime="20231125 20:06:28.693" endtime="20231125 20:06:29.015"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Api Documentation</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:29.015" endtime="20231125 20:06:29.295"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:28.692" endtime="20231125 20:06:29.295"/>
+</kw>
+<kw name="Navigate to Insert 1 Person" library="Oppen">
+<kw name="Navigate to Insert 1 Person section" library="SwaggUIPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>calculator-controller</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:29.298" level="INFO">Clicking link 'calculator-controller'.</msg>
+<status status="PASS" starttime="20231125 20:06:29.298" endtime="20231125 20:06:29.382"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Insert_1_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:29.383" level="INFO">Clicking element '//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//div'.</msg>
+<status status="PASS" starttime="20231125 20:06:29.383" endtime="20231125 20:06:29.486"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:29.297" endtime="20231125 20:06:29.486"/>
+</kw>
+<kw name="Click Try It button" library="SwaggUIPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Insert_1_Try_It_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:29.487" level="INFO">Clicking button 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//button'.</msg>
+<status status="PASS" starttime="20231125 20:06:29.486" endtime="20231125 20:06:29.585"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:29.486" endtime="20231125 20:06:29.585"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:29.296" endtime="20231125 20:06:29.585"/>
+</kw>
+<kw name="Insert 1 hero via POST" library="Oppen">
+<kw name="Input 1 hero payload into textbox" library="SwaggUIPage">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231125 20:06:29.586" endtime="20231125 20:06:29.635"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<arg>${HERO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:29.636" level="INFO">Typing text '{"birthday":"11111990","gender":"F","name":"Sally","natid":"768768900J","salary":"30000.00","tax":"30.00"}' into text field 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//textarea'.</msg>
+<status status="PASS" starttime="20231125 20:06:29.635" endtime="20231125 20:06:30.448"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Execute</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:30.449" level="INFO">Clicking button 'Execute'.</msg>
+<status status="PASS" starttime="20231125 20:06:30.449" endtime="20231125 20:06:30.519"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:29.586" endtime="20231125 20:06:30.519"/>
+</kw>
+<kw name="Verify Success Message" library="SwaggUIPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Alright</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:30.519" endtime="20231125 20:06:30.552"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:30.519" endtime="20231125 20:06:30.552"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:29.586" endtime="20231125 20:06:30.552"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:06:30.553" endtime="20231125 20:06:32.643"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:30.552" endtime="20231125 20:06:32.643"/>
+</kw>
+<doc>Positive Case - all fields are there</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:06:24.656" endtime="20231125 20:06:32.644"/>
+</test>
+<test id="s1-s1-t2" name="Clerk should not be able to insert hero without natID" line="18">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:06:32.647" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:06:32.647" endtime="20231125 20:06:34.313"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:32.646" endtime="20231125 20:06:34.313"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:34.314" endtime="20231125 20:06:34.333"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:34.313" endtime="20231125 20:06:34.333"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:32.646" endtime="20231125 20:06:34.333"/>
+</kw>
+<kw name="Navigate to SwaggerUI" library="Oppen">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Visit Swagger</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:34.334" level="INFO">Clicking link 'Visit Swagger'.</msg>
+<status status="PASS" starttime="20231125 20:06:34.334" endtime="20231125 20:06:34.609"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Api Documentation</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:34.609" endtime="20231125 20:06:34.864"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:34.334" endtime="20231125 20:06:34.864"/>
+</kw>
+<kw name="Navigate to Insert 1 Person" library="Oppen">
+<kw name="Navigate to Insert 1 Person section" library="SwaggUIPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>calculator-controller</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:34.866" level="INFO">Clicking link 'calculator-controller'.</msg>
+<status status="PASS" starttime="20231125 20:06:34.866" endtime="20231125 20:06:34.932"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Insert_1_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:34.933" level="INFO">Clicking element '//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//div'.</msg>
+<status status="PASS" starttime="20231125 20:06:34.932" endtime="20231125 20:06:35.022"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:34.865" endtime="20231125 20:06:35.022"/>
+</kw>
+<kw name="Click Try It button" library="SwaggUIPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Insert_1_Try_It_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:35.024" level="INFO">Clicking button 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//button'.</msg>
+<status status="PASS" starttime="20231125 20:06:35.023" endtime="20231125 20:06:35.095"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:35.022" endtime="20231125 20:06:35.095"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:34.865" endtime="20231125 20:06:35.095"/>
+</kw>
+<kw name="Insert 1 hero without natId via POST" library="Oppen">
+<kw name="Input 1 hero without natId payload into textbox" library="SwaggUIPage">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231125 20:06:35.097" endtime="20231125 20:06:35.138"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<arg>${HERO_no_natId}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:35.139" level="INFO">Typing text '{"birthday":"11111990","name":"Sally","salary":"30000.00","tax":"30.00"}' into text field 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//textarea'.</msg>
+<status status="PASS" starttime="20231125 20:06:35.139" endtime="20231125 20:06:35.742"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Execute</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:35.743" level="INFO">Clicking button 'Execute'.</msg>
+<status status="PASS" starttime="20231125 20:06:35.743" endtime="20231125 20:06:35.819"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:35.096" endtime="20231125 20:06:35.819"/>
+</kw>
+<kw name="Verify Internal Server Error Message" library="SwaggUIPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${post_result}</var>
+<arg>${Insert_results}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:35.883" level="INFO">${post_result} = 500
+Undocumented</msg>
+<status status="PASS" starttime="20231125 20:06:35.819" endtime="20231125 20:06:35.883"/>
+</kw>
+<kw name="Get Substring" library="String">
+<var>${end_result}</var>
+<arg>${post_result}</arg>
+<arg>0</arg>
+<arg>3</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20231125 20:06:35.884" level="INFO">${end_result} = 500</msg>
+<status status="PASS" starttime="20231125 20:06:35.883" endtime="20231125 20:06:35.884"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${end_result}</arg>
+<arg>500</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:06:35.884" endtime="20231125 20:06:35.884"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:35.819" endtime="20231125 20:06:35.884"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:35.096" endtime="20231125 20:06:35.884"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:06:35.885" endtime="20231125 20:06:37.967"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:35.885" endtime="20231125 20:06:37.967"/>
+</kw>
+<doc>AC1 - Single record of a working class hero should consist of Natural Id (natid), Name, Gender, Birthday, Salary and Tax paid</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:06:32.645" endtime="20231125 20:06:37.968"/>
+</test>
+<test id="s1-s1-t3" name="Clerk should not be able to insert hero without name" line="27">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:06:37.971" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:06:37.970" endtime="20231125 20:06:39.653"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:37.970" endtime="20231125 20:06:39.653"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:39.654" endtime="20231125 20:06:39.671"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:39.654" endtime="20231125 20:06:39.672"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:37.970" endtime="20231125 20:06:39.672"/>
+</kw>
+<kw name="Navigate to SwaggerUI" library="Oppen">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Visit Swagger</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:39.673" level="INFO">Clicking link 'Visit Swagger'.</msg>
+<status status="PASS" starttime="20231125 20:06:39.672" endtime="20231125 20:06:39.963"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Api Documentation</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:39.963" endtime="20231125 20:06:40.215"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:39.672" endtime="20231125 20:06:40.215"/>
+</kw>
+<kw name="Navigate to Insert 1 Person" library="Oppen">
+<kw name="Navigate to Insert 1 Person section" library="SwaggUIPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>calculator-controller</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:40.216" level="INFO">Clicking link 'calculator-controller'.</msg>
+<status status="PASS" starttime="20231125 20:06:40.216" endtime="20231125 20:06:40.285"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Insert_1_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:40.286" level="INFO">Clicking element '//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//div'.</msg>
+<status status="PASS" starttime="20231125 20:06:40.285" endtime="20231125 20:06:40.374"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:40.216" endtime="20231125 20:06:40.375"/>
+</kw>
+<kw name="Click Try It button" library="SwaggUIPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Insert_1_Try_It_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:40.376" level="INFO">Clicking button 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//button'.</msg>
+<status status="PASS" starttime="20231125 20:06:40.375" endtime="20231125 20:06:40.458"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:40.375" endtime="20231125 20:06:40.458"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:40.216" endtime="20231125 20:06:40.459"/>
+</kw>
+<kw name="Insert 1 hero without name via POST" library="Oppen">
+<kw name="Input 1 hero without name payload into textbox" library="SwaggUIPage">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231125 20:06:40.460" endtime="20231125 20:06:40.502"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<arg>${HERO_no_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:40.502" level="INFO">Typing text '{"birthday":"11111990","gender":"F","natid":"768768900J","salary":"30000.00","tax":"30.00"}' into text field 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//textarea'.</msg>
+<status status="PASS" starttime="20231125 20:06:40.502" endtime="20231125 20:06:41.260"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Execute</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:41.261" level="INFO">Clicking button 'Execute'.</msg>
+<status status="PASS" starttime="20231125 20:06:41.260" endtime="20231125 20:06:41.338"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:40.460" endtime="20231125 20:06:41.338"/>
+</kw>
+<kw name="Verify Internal Server Error Message" library="SwaggUIPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${post_result}</var>
+<arg>${Insert_results}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:41.402" level="INFO">${post_result} = 500
+Undocumented</msg>
+<status status="PASS" starttime="20231125 20:06:41.339" endtime="20231125 20:06:41.402"/>
+</kw>
+<kw name="Get Substring" library="String">
+<var>${end_result}</var>
+<arg>${post_result}</arg>
+<arg>0</arg>
+<arg>3</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20231125 20:06:41.402" level="INFO">${end_result} = 500</msg>
+<status status="PASS" starttime="20231125 20:06:41.402" endtime="20231125 20:06:41.402"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${end_result}</arg>
+<arg>500</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:06:41.403" endtime="20231125 20:06:41.403"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:41.338" endtime="20231125 20:06:41.403"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:40.459" endtime="20231125 20:06:41.403"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:06:41.404" endtime="20231125 20:06:43.499"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:41.403" endtime="20231125 20:06:43.499"/>
+</kw>
+<doc>AC1 - Single record of a working class hero should consist of Natural Id (natid), Name, Gender, Birthday, Salary and Tax paid</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:06:37.969" endtime="20231125 20:06:43.500"/>
+</test>
+<test id="s1-s1-t4" name="Clerk should not be able to insert hero without Birthday" line="45">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:06:43.505" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:06:43.504" endtime="20231125 20:06:45.212"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:43.504" endtime="20231125 20:06:45.213"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:45.214" endtime="20231125 20:06:45.229"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:45.213" endtime="20231125 20:06:45.229"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:43.503" endtime="20231125 20:06:45.229"/>
+</kw>
+<kw name="Navigate to SwaggerUI" library="Oppen">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Visit Swagger</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:45.231" level="INFO">Clicking link 'Visit Swagger'.</msg>
+<status status="PASS" starttime="20231125 20:06:45.230" endtime="20231125 20:06:45.548"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Api Documentation</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:45.548" endtime="20231125 20:06:45.810"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:45.230" endtime="20231125 20:06:45.810"/>
+</kw>
+<kw name="Navigate to Insert 1 Person" library="Oppen">
+<kw name="Navigate to Insert 1 Person section" library="SwaggUIPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>calculator-controller</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:45.814" level="INFO">Clicking link 'calculator-controller'.</msg>
+<status status="PASS" starttime="20231125 20:06:45.813" endtime="20231125 20:06:45.898"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Insert_1_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:45.899" level="INFO">Clicking element '//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//div'.</msg>
+<status status="PASS" starttime="20231125 20:06:45.898" endtime="20231125 20:06:46.011"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:45.812" endtime="20231125 20:06:46.011"/>
+</kw>
+<kw name="Click Try It button" library="SwaggUIPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Insert_1_Try_It_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:46.012" level="INFO">Clicking button 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//button'.</msg>
+<status status="PASS" starttime="20231125 20:06:46.012" endtime="20231125 20:06:46.101"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:46.011" endtime="20231125 20:06:46.101"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:45.811" endtime="20231125 20:06:46.101"/>
+</kw>
+<kw name="Insert 1 hero without Birthday via POST" library="Oppen">
+<kw name="Input 1 hero without Birthday payload into textbox" library="SwaggUIPage">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231125 20:06:46.102" endtime="20231125 20:06:46.148"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<arg>${HERO_no_Birthday}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:46.150" level="INFO">Typing text '{"gender":"F","name":"Sally","natid":"768768900J","salary":"30000.00","tax":"30.00"}' into text field 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//textarea'.</msg>
+<status status="PASS" starttime="20231125 20:06:46.149" endtime="20231125 20:06:46.926"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Execute</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:46.927" level="INFO">Clicking button 'Execute'.</msg>
+<status status="PASS" starttime="20231125 20:06:46.926" endtime="20231125 20:06:47.017"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:46.102" endtime="20231125 20:06:47.018"/>
+</kw>
+<kw name="Verify Internal Server Error Message" library="SwaggUIPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${post_result}</var>
+<arg>${Insert_results}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:47.071" level="INFO">${post_result} = 500
+Undocumented</msg>
+<status status="PASS" starttime="20231125 20:06:47.018" endtime="20231125 20:06:47.071"/>
+</kw>
+<kw name="Get Substring" library="String">
+<var>${end_result}</var>
+<arg>${post_result}</arg>
+<arg>0</arg>
+<arg>3</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20231125 20:06:47.072" level="INFO">${end_result} = 500</msg>
+<status status="PASS" starttime="20231125 20:06:47.071" endtime="20231125 20:06:47.072"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${end_result}</arg>
+<arg>500</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:06:47.072" endtime="20231125 20:06:47.072"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:47.018" endtime="20231125 20:06:47.072"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:46.102" endtime="20231125 20:06:47.072"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:06:47.073" endtime="20231125 20:06:49.184"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:47.073" endtime="20231125 20:06:49.184"/>
+</kw>
+<doc>AC1 - Single record of a working class hero should consist of Natural Id (natid), Name, Gender, Birthday, Salary and Tax paid</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:06:43.501" endtime="20231125 20:06:49.185"/>
+</test>
+<test id="s1-s1-t5" name="Clerk should not be able to insert hero without Salary" line="54">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:06:49.193" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:06:49.192" endtime="20231125 20:06:50.857"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:49.191" endtime="20231125 20:06:50.857"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:50.858" endtime="20231125 20:06:50.870"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:50.857" endtime="20231125 20:06:50.870"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:49.191" endtime="20231125 20:06:50.871"/>
+</kw>
+<kw name="Navigate to SwaggerUI" library="Oppen">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Visit Swagger</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:50.872" level="INFO">Clicking link 'Visit Swagger'.</msg>
+<status status="PASS" starttime="20231125 20:06:50.871" endtime="20231125 20:06:51.189"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Api Documentation</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:51.189" endtime="20231125 20:06:51.413"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:50.871" endtime="20231125 20:06:51.414"/>
+</kw>
+<kw name="Navigate to Insert 1 Person" library="Oppen">
+<kw name="Navigate to Insert 1 Person section" library="SwaggUIPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>calculator-controller</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:51.416" level="INFO">Clicking link 'calculator-controller'.</msg>
+<status status="PASS" starttime="20231125 20:06:51.415" endtime="20231125 20:06:51.501"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Insert_1_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:51.502" level="INFO">Clicking element '//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//div'.</msg>
+<status status="PASS" starttime="20231125 20:06:51.502" endtime="20231125 20:06:51.619"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:51.415" endtime="20231125 20:06:51.620"/>
+</kw>
+<kw name="Click Try It button" library="SwaggUIPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Insert_1_Try_It_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:51.622" level="INFO">Clicking button 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//button'.</msg>
+<status status="PASS" starttime="20231125 20:06:51.621" endtime="20231125 20:06:51.754"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:51.620" endtime="20231125 20:06:51.754"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:51.414" endtime="20231125 20:06:51.754"/>
+</kw>
+<kw name="Insert 1 hero without Salary via POST" library="Oppen">
+<kw name="Input 1 hero without Salary payload into textbox" library="SwaggUIPage">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231125 20:06:51.756" endtime="20231125 20:06:51.807"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<arg>${HERO_no_Salary}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:51.809" level="INFO">Typing text '{"birthday":"11111990","gender":"F","name":"Sally","natid":"768768900J","tax":"30.00"}' into text field 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//textarea'.</msg>
+<status status="PASS" starttime="20231125 20:06:51.808" endtime="20231125 20:06:52.601"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Execute</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:52.602" level="INFO">Clicking button 'Execute'.</msg>
+<status status="PASS" starttime="20231125 20:06:52.602" endtime="20231125 20:06:52.689"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:51.755" endtime="20231125 20:06:52.690"/>
+</kw>
+<kw name="Verify Internal Server Error Message" library="SwaggUIPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${post_result}</var>
+<arg>${Insert_results}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:52.746" level="INFO">${post_result} = 500
+Undocumented</msg>
+<status status="PASS" starttime="20231125 20:06:52.690" endtime="20231125 20:06:52.746"/>
+</kw>
+<kw name="Get Substring" library="String">
+<var>${end_result}</var>
+<arg>${post_result}</arg>
+<arg>0</arg>
+<arg>3</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20231125 20:06:52.747" level="INFO">${end_result} = 500</msg>
+<status status="PASS" starttime="20231125 20:06:52.746" endtime="20231125 20:06:52.747"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${end_result}</arg>
+<arg>500</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:06:52.747" endtime="20231125 20:06:52.747"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:52.690" endtime="20231125 20:06:52.747"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:51.755" endtime="20231125 20:06:52.747"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:06:52.748" endtime="20231125 20:06:54.857"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:52.748" endtime="20231125 20:06:54.857"/>
+</kw>
+<doc>AC1 - Single record of a working class hero should consist of Natural Id (natid), Name, Gender, Birthday, Salary and Tax paid</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:06:49.186" endtime="20231125 20:06:54.858"/>
+</test>
+<test id="s1-s1-t6" name="Clerk should not be able to insert hero without Tax Paid" line="63">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:06:54.865" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:06:54.863" endtime="20231125 20:06:56.484"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:54.862" endtime="20231125 20:06:56.484"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:56.485" endtime="20231125 20:06:56.510"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:56.485" endtime="20231125 20:06:56.510"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:54.861" endtime="20231125 20:06:56.510"/>
+</kw>
+<kw name="Navigate to SwaggerUI" library="Oppen">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Visit Swagger</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:56.511" level="INFO">Clicking link 'Visit Swagger'.</msg>
+<status status="PASS" starttime="20231125 20:06:56.511" endtime="20231125 20:06:56.807"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Api Documentation</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:06:56.807" endtime="20231125 20:06:57.077"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:56.511" endtime="20231125 20:06:57.077"/>
+</kw>
+<kw name="Navigate to Insert 1 Person" library="Oppen">
+<kw name="Navigate to Insert 1 Person section" library="SwaggUIPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>calculator-controller</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:57.080" level="INFO">Clicking link 'calculator-controller'.</msg>
+<status status="PASS" starttime="20231125 20:06:57.079" endtime="20231125 20:06:57.152"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Insert_1_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:57.153" level="INFO">Clicking element '//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//div'.</msg>
+<status status="PASS" starttime="20231125 20:06:57.152" endtime="20231125 20:06:57.250"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:57.078" endtime="20231125 20:06:57.250"/>
+</kw>
+<kw name="Click Try It button" library="SwaggUIPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Insert_1_Try_It_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:57.252" level="INFO">Clicking button 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//button'.</msg>
+<status status="PASS" starttime="20231125 20:06:57.251" endtime="20231125 20:06:57.339"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:57.251" endtime="20231125 20:06:57.339"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:57.078" endtime="20231125 20:06:57.339"/>
+</kw>
+<kw name="Insert 1 hero without Tax Paid via POST" library="Oppen">
+<kw name="Input 1 hero without Tax Paid payload into textbox" library="SwaggUIPage">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231125 20:06:57.340" endtime="20231125 20:06:57.383"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Insert_1_textInput}</arg>
+<arg>${HERO_no_TaxPaid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:57.384" level="INFO">Typing text '{"birthday":"11111990","gender":"F","name":"Sally","natid":"768768900J","salary":"30000.00"}' into text field 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']//textarea'.</msg>
+<status status="PASS" starttime="20231125 20:06:57.384" endtime="20231125 20:06:58.221"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Execute</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:58.222" level="INFO">Clicking button 'Execute'.</msg>
+<status status="PASS" starttime="20231125 20:06:58.221" endtime="20231125 20:06:58.309"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:57.340" endtime="20231125 20:06:58.309"/>
+</kw>
+<kw name="Verify Internal Server Error Message" library="SwaggUIPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${post_result}</var>
+<arg>${Insert_results}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:06:58.365" level="INFO">${post_result} = 500
+Undocumented</msg>
+<status status="PASS" starttime="20231125 20:06:58.310" endtime="20231125 20:06:58.365"/>
+</kw>
+<kw name="Get Substring" library="String">
+<var>${end_result}</var>
+<arg>${post_result}</arg>
+<arg>0</arg>
+<arg>3</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20231125 20:06:58.366" level="INFO">${end_result} = 500</msg>
+<status status="PASS" starttime="20231125 20:06:58.366" endtime="20231125 20:06:58.366"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${end_result}</arg>
+<arg>500</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:06:58.366" endtime="20231125 20:06:58.367"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:58.310" endtime="20231125 20:06:58.367"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:57.340" endtime="20231125 20:06:58.367"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:06:58.368" endtime="20231125 20:07:00.461"/>
+</kw>
+<status status="PASS" starttime="20231125 20:06:58.368" endtime="20231125 20:07:00.461"/>
+</kw>
+<doc>AC1 - Single record of a working class hero should consist of Natural Id (natid), Name, Gender, Birthday, Salary and Tax paid</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:06:54.860" endtime="20231125 20:07:00.461"/>
+</test>
+<doc>As the Clerk, I should be able to insert a single record of working class hero into database via an API</doc>
+<status status="PASS" starttime="20231125 20:06:24.170" endtime="20231125 20:07:00.463"/>
+</suite>
+<suite id="s1-s2" name="TestOppenStory2" source="C:\Users\jeann\PycharmProjects\testOppen\Tests\TestOppenStory2.robot">
+<test id="s1-s2-t1" name="Clerk should be able to insert mulitple working class hero" line="10">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:00.503" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:00.502" endtime="20231125 20:07:02.233"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:00.502" endtime="20231125 20:07:02.233"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:02.233" endtime="20231125 20:07:02.247"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:02.233" endtime="20231125 20:07:02.247"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:00.501" endtime="20231125 20:07:02.247"/>
+</kw>
+<kw name="Navigate to SwaggerUI" library="Oppen">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Visit Swagger</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:02.249" level="INFO">Clicking link 'Visit Swagger'.</msg>
+<status status="PASS" starttime="20231125 20:07:02.248" endtime="20231125 20:07:02.542"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Api Documentation</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:02.542" endtime="20231125 20:07:02.794"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:02.248" endtime="20231125 20:07:02.794"/>
+</kw>
+<kw name="Insert multiple heroes via POST" library="Oppen">
+<kw name="Navigate to Insert Multiple Persons section" library="SwaggUIPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>calculator-controller</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:02.797" level="INFO">Clicking link 'calculator-controller'.</msg>
+<status status="PASS" starttime="20231125 20:07:02.796" endtime="20231125 20:07:02.868"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Insert_Mulitple_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:02.869" level="INFO">Clicking element '//div[@id='operations-calculator-controller-insertPersonUsingPOST']//div'.</msg>
+<status status="PASS" starttime="20231125 20:07:02.868" endtime="20231125 20:07:02.968"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:02.796" endtime="20231125 20:07:02.969"/>
+</kw>
+<kw name="Click Try It button2" library="SwaggUIPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Insert_Mulitple_Try_It_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:02.970" level="INFO">Clicking button 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST']//button'.</msg>
+<status status="PASS" starttime="20231125 20:07:02.969" endtime="20231125 20:07:03.056"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:02.969" endtime="20231125 20:07:03.056"/>
+</kw>
+<kw name="Input multiple heroes payload into textbox" library="SwaggUIPage">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Insert_Mulitple_textInput}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231125 20:07:03.057" endtime="20231125 20:07:03.100"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Insert_Mulitple_textInput}</arg>
+<arg>${2_HEROES}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:03.101" level="INFO">Typing text '[{"birthday":"11111990","gender":"F","name":"JeanGrey","natid":"111111111","salary":"80000.00","tax":"80.00"},{"birthday":"20112000","gender":"M","name":"Cyclops","natid":"22222222","salary":"10000.00","tax":"10.00"}]' into text field 'xpath=//div[@id='operations-calculator-controller-insertPersonUsingPOST']//textarea'.</msg>
+<status status="PASS" starttime="20231125 20:07:03.100" endtime="20231125 20:07:04.807"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Execute</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:04.808" level="INFO">Clicking button 'Execute'.</msg>
+<status status="PASS" starttime="20231125 20:07:04.808" endtime="20231125 20:07:04.896"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:03.056" endtime="20231125 20:07:04.896"/>
+</kw>
+<kw name="Verify Success Message" library="SwaggUIPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Alright</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:04.897" endtime="20231125 20:07:04.928"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:04.896" endtime="20231125 20:07:04.928"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:02.795" endtime="20231125 20:07:04.928"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:07:04.930" endtime="20231125 20:07:07.042"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:04.929" endtime="20231125 20:07:07.042"/>
+</kw>
+<doc>As the Clerk, I should be able to insert more than one working class hero into database via an API</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:07:00.500" endtime="20231125 20:07:07.043"/>
+</test>
+<status status="PASS" starttime="20231125 20:07:00.474" endtime="20231125 20:07:07.046"/>
+</suite>
+<suite id="s1-s3" name="TestOppenStory3" source="C:\Users\jeann\PycharmProjects\testOppen\Tests\TestOppenStory3.robot">
+<test id="s1-s3-t1" name="Clerk should be able to upload a csv file to a portal" line="10">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:07.069" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:07.069" endtime="20231125 20:07:08.735"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:07.068" endtime="20231125 20:07:08.735"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:08.736" endtime="20231125 20:07:08.760"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:08.736" endtime="20231125 20:07:08.760"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:07.068" endtime="20231125 20:07:08.760"/>
+</kw>
+<kw name="Upload CSV file" library="Oppen">
+<kw name="Get Number of heros before upload" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRowsBefore}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:07:08.772" level="INFO">${countRowsBefore} = 7</msg>
+<status status="PASS" starttime="20231125 20:07:08.761" endtime="20231125 20:07:08.772"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${countRowsBefore}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:08.773" level="INFO">${countRowsBefore} = 7</msg>
+<status status="PASS" starttime="20231125 20:07:08.772" endtime="20231125 20:07:08.773"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:08.761" endtime="20231125 20:07:08.773"/>
+</kw>
+<kw name="Click on UPLOAD CSV FILE" library="LandingPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Upload_CSV_Section}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231125 20:07:08.773" endtime="20231125 20:07:08.800"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Upload_CSV_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:08.801" level="INFO">Clicking element '//div[@class='custom-file']'.</msg>
+<status status="PASS" starttime="20231125 20:07:08.801" endtime="20231125 20:07:08.844"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:08.773" endtime="20231125 20:07:08.844"/>
+</kw>
+<kw name="Choose file to upload" library="LandingPage">
+<kw name="get csv relative path" library="LandingPage">
+<kw name="Get Substring" library="String">
+<var>${CSV_location}</var>
+<arg>C:\\Users\\jeann\\PycharmProjects\\testOppen\\Resources\\PO</arg>
+<arg>0</arg>
+<arg>-3</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20231125 20:07:08.845" level="INFO">${CSV_location} = C:\Users\jeann\PycharmProjects\testOppen\Resources</msg>
+<status status="PASS" starttime="20231125 20:07:08.845" endtime="20231125 20:07:08.845"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${CSV_location}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:08.845" level="INFO">${CSV_location} = C:\Users\jeann\PycharmProjects\testOppen\Resources</msg>
+<status status="PASS" starttime="20231125 20:07:08.845" endtime="20231125 20:07:08.845"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:08.845" endtime="20231125 20:07:08.845"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${Upload_CSV_input}</arg>
+<arg>${CSV_location}\\OppenHeroes1.csv</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20231125 20:07:08.846" level="INFO">Sending C:\Users\jeann\PycharmProjects\testOppen\Resources\OppenHeroes1.csv to browser.</msg>
+<status status="PASS" starttime="20231125 20:07:08.846" endtime="20231125 20:07:08.886"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 20:07:13.898" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231125 20:07:08.886" endtime="20231125 20:07:13.898"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:08.844" endtime="20231125 20:07:13.898"/>
+</kw>
+<kw name="Get Number of heros after upload" library="LandingPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:13.899" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:07:13.899" endtime="20231125 20:07:13.972"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRowsAfter}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:07:13.993" level="INFO">${countRowsAfter} = 11</msg>
+<status status="PASS" starttime="20231125 20:07:13.972" endtime="20231125 20:07:13.994"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${countRowsAfter}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:13.994" level="INFO">${countRowsAfter} = 11</msg>
+<status status="PASS" starttime="20231125 20:07:13.994" endtime="20231125 20:07:13.994"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:13.898" endtime="20231125 20:07:13.995"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:08.761" endtime="20231125 20:07:13.995"/>
+</kw>
+<kw name="Verify Heroes are successfully uploaded" library="Oppen">
+<kw name="Verify Heroes are successfully uploaded" library="LandingPage">
+<kw name="Evaluate" library="BuiltIn">
+<var>${countRowsFinal}</var>
+<arg>${countRowsAfter} - ${countRowsBefore}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:07:13.998" level="INFO">${countRowsFinal} = 4</msg>
+<status status="PASS" starttime="20231125 20:07:13.998" endtime="20231125 20:07:13.999"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${countRowsFinal}</arg>
+<arg>4</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20231125 20:07:13.999" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:13.999" endtime="20231125 20:07:13.999"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:13.998" endtime="20231125 20:07:13.999"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:13.997" endtime="20231125 20:07:13.999"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:07:14.000" endtime="20231125 20:07:16.091"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:13.999" endtime="20231125 20:07:16.091"/>
+</kw>
+<doc>Happy case</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:07:07.067" endtime="20231125 20:07:16.092"/>
+</test>
+<test id="s1-s3-t2" name="Clerk should not be able to upload a csv file without headers" line="18">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:16.095" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:16.095" endtime="20231125 20:07:17.826"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:16.094" endtime="20231125 20:07:17.826"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:17.827" endtime="20231125 20:07:17.859"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:17.826" endtime="20231125 20:07:17.860"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:16.094" endtime="20231125 20:07:17.860"/>
+</kw>
+<kw name="Upload CSV file with no headers" library="Oppen">
+<kw name="Get Number of heros before upload" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRowsBefore}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:07:17.873" level="INFO">${countRowsBefore} = 11</msg>
+<status status="PASS" starttime="20231125 20:07:17.861" endtime="20231125 20:07:17.873"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${countRowsBefore}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:17.873" level="INFO">${countRowsBefore} = 11</msg>
+<status status="PASS" starttime="20231125 20:07:17.873" endtime="20231125 20:07:17.874"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:17.861" endtime="20231125 20:07:17.874"/>
+</kw>
+<kw name="Click on UPLOAD CSV FILE" library="LandingPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Upload_CSV_Section}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231125 20:07:17.874" endtime="20231125 20:07:17.899"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Upload_CSV_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:17.899" level="INFO">Clicking element '//div[@class='custom-file']'.</msg>
+<status status="PASS" starttime="20231125 20:07:17.899" endtime="20231125 20:07:17.948"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:17.874" endtime="20231125 20:07:17.948"/>
+</kw>
+<kw name="Choose file with no headers to upload" library="LandingPage">
+<kw name="get csv relative path" library="LandingPage">
+<kw name="Get Substring" library="String">
+<var>${CSV_location}</var>
+<arg>C:\\Users\\jeann\\PycharmProjects\\testOppen\\Resources\\PO</arg>
+<arg>0</arg>
+<arg>-3</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20231125 20:07:17.949" level="INFO">${CSV_location} = C:\Users\jeann\PycharmProjects\testOppen\Resources</msg>
+<status status="PASS" starttime="20231125 20:07:17.949" endtime="20231125 20:07:17.949"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${CSV_location}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:17.950" level="INFO">${CSV_location} = C:\Users\jeann\PycharmProjects\testOppen\Resources</msg>
+<status status="PASS" starttime="20231125 20:07:17.950" endtime="20231125 20:07:17.950"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:17.949" endtime="20231125 20:07:17.950"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${Upload_CSV_input}</arg>
+<arg>${CSV_location}\\OppenHeroes_Noheaders.csv</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20231125 20:07:17.951" level="INFO">Sending C:\Users\jeann\PycharmProjects\testOppen\Resources\OppenHeroes_Noheaders.csv to browser.</msg>
+<status status="PASS" starttime="20231125 20:07:17.950" endtime="20231125 20:07:18.003"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 20:07:23.012" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231125 20:07:18.004" endtime="20231125 20:07:23.013"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:17.948" endtime="20231125 20:07:23.013"/>
+</kw>
+<kw name="Get Number of heros after upload" library="LandingPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:23.014" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:07:23.014" endtime="20231125 20:07:23.082"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRowsAfter}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:07:23.104" level="INFO">${countRowsAfter} = 11</msg>
+<status status="PASS" starttime="20231125 20:07:23.082" endtime="20231125 20:07:23.104"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${countRowsAfter}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:23.105" level="INFO">${countRowsAfter} = 11</msg>
+<status status="PASS" starttime="20231125 20:07:23.104" endtime="20231125 20:07:23.105"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:23.013" endtime="20231125 20:07:23.105"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:17.860" endtime="20231125 20:07:23.105"/>
+</kw>
+<kw name="Verify Heroes not uploaded" library="Oppen">
+<kw name="Verify Heroes are not uploaded" library="LandingPage">
+<kw name="Evaluate" library="BuiltIn">
+<var>${countRowsFinal}</var>
+<arg>${countRowsAfter} - ${countRowsBefore}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:07:23.107" level="INFO">${countRowsFinal} = 0</msg>
+<status status="PASS" starttime="20231125 20:07:23.106" endtime="20231125 20:07:23.107"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${countRowsFinal}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20231125 20:07:23.107" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:23.107" endtime="20231125 20:07:23.107"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:23.106" endtime="20231125 20:07:23.108"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:23.105" endtime="20231125 20:07:23.108"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:07:23.114" endtime="20231125 20:07:25.203"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:23.113" endtime="20231125 20:07:25.203"/>
+</kw>
+<doc>AC1-First row of the csv file must be natid, name, gender, salary, birthday, tax</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:07:16.093" endtime="20231125 20:07:25.204"/>
+</test>
+<test id="s1-s3-t3" name="Clerk should not be able to upload a csv file with an empty line" line="26">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:25.209" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:25.208" endtime="20231125 20:07:26.901"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:25.208" endtime="20231125 20:07:26.901"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:26.901" endtime="20231125 20:07:26.917"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:26.901" endtime="20231125 20:07:26.917"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:25.207" endtime="20231125 20:07:26.917"/>
+</kw>
+<kw name="Upload CSV file with empty line" library="Oppen">
+<kw name="Get Number of heros before upload" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRowsBefore}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:07:26.933" level="INFO">${countRowsBefore} = 11</msg>
+<status status="PASS" starttime="20231125 20:07:26.918" endtime="20231125 20:07:26.933"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${countRowsBefore}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:26.933" level="INFO">${countRowsBefore} = 11</msg>
+<status status="PASS" starttime="20231125 20:07:26.933" endtime="20231125 20:07:26.933"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:26.918" endtime="20231125 20:07:26.933"/>
+</kw>
+<kw name="Click on UPLOAD CSV FILE" library="LandingPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Upload_CSV_Section}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231125 20:07:26.934" endtime="20231125 20:07:26.960"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Upload_CSV_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:26.961" level="INFO">Clicking element '//div[@class='custom-file']'.</msg>
+<status status="PASS" starttime="20231125 20:07:26.960" endtime="20231125 20:07:27.009"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:26.934" endtime="20231125 20:07:27.009"/>
+</kw>
+<kw name="Choose file with empty line to upload" library="LandingPage">
+<kw name="get csv relative path" library="LandingPage">
+<kw name="Get Substring" library="String">
+<var>${CSV_location}</var>
+<arg>C:\\Users\\jeann\\PycharmProjects\\testOppen\\Resources\\PO</arg>
+<arg>0</arg>
+<arg>-3</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20231125 20:07:27.010" level="INFO">${CSV_location} = C:\Users\jeann\PycharmProjects\testOppen\Resources</msg>
+<status status="PASS" starttime="20231125 20:07:27.010" endtime="20231125 20:07:27.010"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${CSV_location}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:27.011" level="INFO">${CSV_location} = C:\Users\jeann\PycharmProjects\testOppen\Resources</msg>
+<status status="PASS" starttime="20231125 20:07:27.010" endtime="20231125 20:07:27.011"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:27.010" endtime="20231125 20:07:27.011"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${Upload_CSV_input}</arg>
+<arg>${CSV_location}\\OppenHeroes2bad.csv</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20231125 20:07:27.011" level="INFO">Sending C:\Users\jeann\PycharmProjects\testOppen\Resources\OppenHeroes2bad.csv to browser.</msg>
+<status status="PASS" starttime="20231125 20:07:27.011" endtime="20231125 20:07:27.057"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 20:07:32.064" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231125 20:07:27.057" endtime="20231125 20:07:32.064"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:27.009" endtime="20231125 20:07:32.064"/>
+</kw>
+<kw name="Get Number of heros after upload" library="LandingPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:32.065" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:07:32.065" endtime="20231125 20:07:32.126"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRowsAfter}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:07:32.150" level="INFO">${countRowsAfter} = 11</msg>
+<status status="PASS" starttime="20231125 20:07:32.126" endtime="20231125 20:07:32.150"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${countRowsAfter}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:32.150" level="INFO">${countRowsAfter} = 11</msg>
+<status status="PASS" starttime="20231125 20:07:32.150" endtime="20231125 20:07:32.150"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:32.064" endtime="20231125 20:07:32.150"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:26.917" endtime="20231125 20:07:32.150"/>
+</kw>
+<kw name="Verify Heroes not uploaded" library="Oppen">
+<kw name="Verify Heroes are not uploaded" library="LandingPage">
+<kw name="Evaluate" library="BuiltIn">
+<var>${countRowsFinal}</var>
+<arg>${countRowsAfter} - ${countRowsBefore}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:07:32.151" level="INFO">${countRowsFinal} = 0</msg>
+<status status="PASS" starttime="20231125 20:07:32.151" endtime="20231125 20:07:32.152"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${countRowsFinal}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20231125 20:07:32.152" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:32.152" endtime="20231125 20:07:32.152"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:32.151" endtime="20231125 20:07:32.152"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:32.151" endtime="20231125 20:07:32.152"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:07:32.152" endtime="20231125 20:07:34.243"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:32.152" endtime="20231125 20:07:34.243"/>
+</kw>
+<doc>AC2-Subsequent rows of csv are the relevant details of each working class hero</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:07:25.206" endtime="20231125 20:07:34.244"/>
+</test>
+<test id="s1-s3-t4" name="Clerk should be able to use a button on the loading page for upload csv" line="34">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:34.248" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:34.248" endtime="20231125 20:07:35.949"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:34.247" endtime="20231125 20:07:35.949"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:35.949" endtime="20231125 20:07:35.963"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:35.949" endtime="20231125 20:07:35.964"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:34.247" endtime="20231125 20:07:35.964"/>
+</kw>
+<kw name="verify 'Upload Csv' is on page" library="LandingPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Upload_CSV_Section}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231125 20:07:35.964" endtime="20231125 20:07:35.989"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:35.964" endtime="20231125 20:07:35.989"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:07:35.991" endtime="20231125 20:07:38.105"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:35.991" endtime="20231125 20:07:38.105"/>
+</kw>
+<doc>AC3-A simple button that allows me to upload a file on my pc to the portal</doc>
+<tag>functional2</tag>
+<status status="PASS" starttime="20231125 20:07:34.246" endtime="20231125 20:07:38.106"/>
+</test>
+<doc>As the Clerk, I should be able to upload a csv file to a portal so that I can populate the database from a UI</doc>
+<status status="PASS" starttime="20231125 20:07:07.050" endtime="20231125 20:07:38.108"/>
+</suite>
+<suite id="s1-s4" name="TestOppenStory4" source="C:\Users\jeann\PycharmProjects\testOppen\Tests\TestOppenStory4.robot">
+<test id="s1-s4-t1" name="Bookkeeper should be able to query the amount of tax relief" line="12">
+<kw name="Delete All Heroes via Rest Call" library="Common">
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/rakeDatabase</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:07:38.144" level="INFO">POST Request : url=http://localhost:8080/calculator/rakeDatabase 
+ path_url=/calculator/rakeDatabase 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20231125 20:07:38.144" level="INFO">POST Response : url=http://localhost:8080/calculator/rakeDatabase 
+ status=200, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '21', 'Date': 'Sat, 25 Nov 2023 12:07:38 GMT'} 
+ body=Successfully raked DB 
+ </msg>
+<msg timestamp="20231125 20:07:38.144" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:38.133" endtime="20231125 20:07:38.144"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:07:38.144" endtime="20231125 20:07:38.145"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:38.132" endtime="20231125 20:07:38.145"/>
+</kw>
+<kw name="Insert Hero via Rest Call" library="Common">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>birthday=01012005</arg>
+<arg>gender=M</arg>
+<arg>name=Hans</arg>
+<arg>natid=1234567890</arg>
+<arg>salary=50000.00</arg>
+<arg>tax=4000.00</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231125 20:07:38.147" level="INFO">${body} = {'birthday': '01012005', 'gender': 'M', 'name': 'Hans', 'natid': '1234567890', 'salary': '50000.00', 'tax': '4000.00'}</msg>
+<status status="PASS" starttime="20231125 20:07:38.146" endtime="20231125 20:07:38.147"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/insert</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:07:38.154" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+ path_url=/calculator/insert 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '118', 'Content-Type': 'application/json'} 
+ body=b'{"birthday": "01012005", "gender": "M", "name": "Hans", "natid": "1234567890", "salary": "50000.00", "tax": "4000.00"}' 
+ </msg>
+<msg timestamp="20231125 20:07:38.154" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+ status=202, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '7', 'Date': 'Sat, 25 Nov 2023 12:07:38 GMT'} 
+ body=Alright 
+ </msg>
+<msg timestamp="20231125 20:07:38.154" level="INFO">${response} = &lt;Response [202]&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:38.147" endtime="20231125 20:07:38.154"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:07:38.155" endtime="20231125 20:07:38.155"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:38.146" endtime="20231125 20:07:38.155"/>
+</kw>
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:38.158" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:38.157" endtime="20231125 20:07:39.833"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:38.156" endtime="20231125 20:07:39.833"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:39.834" endtime="20231125 20:07:39.851"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:39.834" endtime="20231125 20:07:39.851"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:38.156" endtime="20231125 20:07:39.851"/>
+</kw>
+<kw name="Click 'Refresh Tax Relief Table' button" library="Oppen">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:39.853" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:07:39.853" endtime="20231125 20:07:39.927"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:39.852" endtime="20231125 20:07:39.927"/>
+</kw>
+<kw name="Verify table columns" library="Oppen">
+<kw name="Verify table has natId column" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${nationalID_header}</var>
+<arg>${Table_header_1}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:39.965" level="INFO">${nationalID_header} = NatId</msg>
+<status status="PASS" starttime="20231125 20:07:39.929" endtime="20231125 20:07:39.965"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${nationalID_header}</arg>
+<arg>NatId</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:07:39.965" endtime="20231125 20:07:39.965"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:39.929" endtime="20231125 20:07:39.965"/>
+</kw>
+<kw name="Verify table has text relief column" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Relief_header}</var>
+<arg>${Table_header_2}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:39.983" level="INFO">${Relief_header} = Relief</msg>
+<status status="PASS" starttime="20231125 20:07:39.966" endtime="20231125 20:07:39.983"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Relief_header}</arg>
+<arg>Relief</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:07:39.983" endtime="20231125 20:07:39.983"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:39.965" endtime="20231125 20:07:39.983"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:39.928" endtime="20231125 20:07:39.983"/>
+</kw>
+<kw name="Verify inserted Hero is in the table" library="Oppen">
+<kw name="Get Number of heros" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRows}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:07:39.994" level="INFO">${countRows} = 1</msg>
+<status status="PASS" starttime="20231125 20:07:39.984" endtime="20231125 20:07:39.994"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${countRows}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:07:39.995" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:39.995" endtime="20231125 20:07:39.995"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:39.984" endtime="20231125 20:07:39.995"/>
+</kw>
+<kw name="Get and Verify hero content" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${nationalID}</var>
+<arg>${Table_data_natID}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:40.013" level="INFO">${nationalID} = 1234$$$$$$</msg>
+<status status="PASS" starttime="20231125 20:07:39.996" endtime="20231125 20:07:40.013"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${nationalID}</arg>
+<arg>1234$$$$$$</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:07:40.013" endtime="20231125 20:07:40.014"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${taxRelief}</var>
+<arg>${Table_data_Relief}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:40.032" level="INFO">${taxRelief} = 46000.00</msg>
+<status status="PASS" starttime="20231125 20:07:40.014" endtime="20231125 20:07:40.032"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${taxRelief}</arg>
+<arg>46000.00</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20231125 20:07:40.032" endtime="20231125 20:07:40.032"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:39.995" endtime="20231125 20:07:40.033"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:39.984" endtime="20231125 20:07:40.033"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:07:40.034" endtime="20231125 20:07:42.130"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:40.033" endtime="20231125 20:07:42.130"/>
+</kw>
+<doc>Bookkeeper should be able to query the amount of tax relief via 'Refresh Tax Relief Table' button</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:07:38.131" endtime="20231125 20:07:42.131"/>
+</test>
+<test id="s1-s4-t2" name="GET endpoint which returns a list consist of natid, tax relief amount and name" line="23">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:42.135" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:42.134" endtime="20231125 20:07:43.824"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:42.134" endtime="20231125 20:07:43.824"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:43.825" endtime="20231125 20:07:43.842"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:43.825" endtime="20231125 20:07:43.842"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:42.133" endtime="20231125 20:07:43.843"/>
+</kw>
+<kw name="Navigate to SwaggerUI" library="Oppen">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Visit Swagger</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:43.844" level="INFO">Clicking link 'Visit Swagger'.</msg>
+<status status="PASS" starttime="20231125 20:07:43.843" endtime="20231125 20:07:44.195"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Api Documentation</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:44.195" endtime="20231125 20:07:44.460"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:43.843" endtime="20231125 20:07:44.460"/>
+</kw>
+<kw name="Get Tax Relief via Get interface" library="Oppen">
+<kw name="Navigate to Get Tax Relief Section" library="SwaggUIPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>calculator-controller</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:44.461" level="INFO">Clicking link 'calculator-controller'.</msg>
+<status status="PASS" starttime="20231125 20:07:44.461" endtime="20231125 20:07:44.541"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Get_Tax_relief_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:44.542" level="INFO">Clicking element '//div[@id='operations-calculator-controller-getTaxReliefUsingGET']//div'.</msg>
+<status status="PASS" starttime="20231125 20:07:44.541" endtime="20231125 20:07:44.641"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:44.461" endtime="20231125 20:07:44.641"/>
+</kw>
+<kw name="Click Try It button3" library="SwaggUIPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${GetTaxRelief_Try_It_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:44.643" level="INFO">Clicking button 'xpath=//div[@id='operations-calculator-controller-getTaxReliefUsingGET']//button'.</msg>
+<status status="PASS" starttime="20231125 20:07:44.642" endtime="20231125 20:07:44.714"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Execute</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:44.715" level="INFO">Clicking button 'Execute'.</msg>
+<status status="PASS" starttime="20231125 20:07:44.714" endtime="20231125 20:07:44.799"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:44.641" endtime="20231125 20:07:44.799"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:44.460" endtime="20231125 20:07:44.799"/>
+</kw>
+<kw name="Verify contents has required fields" library="Oppen">
+<kw name="Get response body from UI" library="SwaggUIPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${responseBody}</var>
+<arg>${GetTaxRelief_text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:44.857" level="INFO">${responseBody} = [
+  {
+    "natid": "1234$$$$$$",
+    "name": "Hans",
+    "relief": "46000.00"
+  }
+]</msg>
+<status status="PASS" starttime="20231125 20:07:44.801" endtime="20231125 20:07:44.857"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${responseBody}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:44.858" level="INFO">${responseBody} = [
+  {
+    "natid": "1234$$$$$$",
+    "name": "Hans",
+    "relief": "46000.00"
+  }
+]</msg>
+<status status="PASS" starttime="20231125 20:07:44.858" endtime="20231125 20:07:44.858"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:44.800" endtime="20231125 20:07:44.859"/>
+</kw>
+<kw name="Sparse and verify natID, name, relief fields" library="SwaggUIPage">
+<kw name="Evaluate" library="BuiltIn">
+<var>${responseJson}</var>
+<arg>json.loads('''${responseBody}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:07:44.864" level="INFO">${responseJson} = [{'natid': '1234$$$$$$', 'name': 'Hans', 'relief': '46000.00'}]</msg>
+<status status="PASS" starttime="20231125 20:07:44.859" endtime="20231125 20:07:44.864"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${responseJson[0]["natid"]}</arg>
+<arg>1234$$$$$$</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:07:44.864" endtime="20231125 20:07:44.865"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${responseJson[0]["name"]}</arg>
+<arg>Hans</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:07:44.865" endtime="20231125 20:07:44.866"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${responseJson[0]["relief"]}</arg>
+<arg>46000.00</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:07:44.866" endtime="20231125 20:07:44.867"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:44.859" endtime="20231125 20:07:44.867"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:44.800" endtime="20231125 20:07:44.867"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:07:44.868" endtime="20231125 20:07:46.948"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:44.868" endtime="20231125 20:07:46.948"/>
+</kw>
+<doc>AC1-Check Swagger UI response body has natid, tax relief amount and name</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:07:42.132" endtime="20231125 20:07:46.949"/>
+</test>
+<test id="s1-s4-t3" name="natid field must be masked from the 5th character onwards with dollar sign ‘$’" line="33">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:46.955" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:46.954" endtime="20231125 20:07:48.799"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:46.954" endtime="20231125 20:07:48.799"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:48.800" endtime="20231125 20:07:48.816"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:48.800" endtime="20231125 20:07:48.816"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:46.953" endtime="20231125 20:07:48.816"/>
+</kw>
+<kw name="Navigate to SwaggerUI" library="Oppen">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Visit Swagger</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:48.818" level="INFO">Clicking link 'Visit Swagger'.</msg>
+<status status="PASS" starttime="20231125 20:07:48.817" endtime="20231125 20:07:49.144"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Api Documentation</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:49.144" endtime="20231125 20:07:49.425"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:48.817" endtime="20231125 20:07:49.425"/>
+</kw>
+<kw name="Get Tax Relief via Get interface" library="Oppen">
+<kw name="Navigate to Get Tax Relief Section" library="SwaggUIPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>calculator-controller</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:49.427" level="INFO">Clicking link 'calculator-controller'.</msg>
+<status status="PASS" starttime="20231125 20:07:49.426" endtime="20231125 20:07:49.500"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Get_Tax_relief_Section}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:49.501" level="INFO">Clicking element '//div[@id='operations-calculator-controller-getTaxReliefUsingGET']//div'.</msg>
+<status status="PASS" starttime="20231125 20:07:49.500" endtime="20231125 20:07:49.599"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:49.426" endtime="20231125 20:07:49.599"/>
+</kw>
+<kw name="Click Try It button3" library="SwaggUIPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${GetTaxRelief_Try_It_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:49.601" level="INFO">Clicking button 'xpath=//div[@id='operations-calculator-controller-getTaxReliefUsingGET']//button'.</msg>
+<status status="PASS" starttime="20231125 20:07:49.600" endtime="20231125 20:07:49.671"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Execute</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:49.671" level="INFO">Clicking button 'Execute'.</msg>
+<status status="PASS" starttime="20231125 20:07:49.671" endtime="20231125 20:07:49.773"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:49.600" endtime="20231125 20:07:49.774"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:49.426" endtime="20231125 20:07:49.774"/>
+</kw>
+<kw name="Verify natID has $ from 5 chacter onwards" library="Oppen">
+<kw name="Get response body from UI" library="SwaggUIPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${responseBody}</var>
+<arg>${GetTaxRelief_text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:49.844" level="INFO">${responseBody} = [
+  {
+    "natid": "1234$$$$$$",
+    "name": "Hans",
+    "relief": "46000.00"
+  }
+]</msg>
+<status status="PASS" starttime="20231125 20:07:49.803" endtime="20231125 20:07:49.844"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${responseBody}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:07:49.845" level="INFO">${responseBody} = [
+  {
+    "natid": "1234$$$$$$",
+    "name": "Hans",
+    "relief": "46000.00"
+  }
+]</msg>
+<status status="PASS" starttime="20231125 20:07:49.844" endtime="20231125 20:07:49.845"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:49.803" endtime="20231125 20:07:49.845"/>
+</kw>
+<kw name="Sparse and verify natID field has mask first 5 char" library="SwaggUIPage">
+<kw name="Evaluate" library="BuiltIn">
+<var>${responseJson}</var>
+<arg>json.loads('''${responseBody}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:07:49.846" level="INFO">${responseJson} = [{'natid': '1234$$$$$$', 'name': 'Hans', 'relief': '46000.00'}]</msg>
+<status status="PASS" starttime="20231125 20:07:49.846" endtime="20231125 20:07:49.846"/>
+</kw>
+<kw name="Get Substring" library="String">
+<var>${endString}</var>
+<arg>${responseJson[0]["natid"]}</arg>
+<arg>4</arg>
+<arg>-1</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20231125 20:07:49.847" level="INFO">${endString} = $$$$$</msg>
+<status status="PASS" starttime="20231125 20:07:49.846" endtime="20231125 20:07:49.848"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${endString}</arg>
+<arg>$$$$$</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:07:49.848" endtime="20231125 20:07:49.848"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:49.845" endtime="20231125 20:07:49.848"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:49.802" endtime="20231125 20:07:49.848"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:07:49.849" endtime="20231125 20:07:51.934"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:49.849" endtime="20231125 20:07:51.934"/>
+</kw>
+<doc>AC2-Check NatId field is masked with $</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:07:46.952" endtime="20231125 20:07:51.935"/>
+</test>
+<test id="s1-s4-t4" name="Tax Relief should be correct if Male Hero is under 18" line="42">
+<kw name="Delete All Heroes via Rest Call" library="Common">
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/rakeDatabase</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:07:51.943" level="INFO">POST Request : url=http://localhost:8080/calculator/rakeDatabase 
+ path_url=/calculator/rakeDatabase 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20231125 20:07:51.943" level="INFO">POST Response : url=http://localhost:8080/calculator/rakeDatabase 
+ status=200, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '21', 'Date': 'Sat, 25 Nov 2023 12:07:51 GMT'} 
+ body=Successfully raked DB 
+ </msg>
+<msg timestamp="20231125 20:07:51.943" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:51.937" endtime="20231125 20:07:51.943"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:07:51.943" endtime="20231125 20:07:51.944"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:51.937" endtime="20231125 20:07:51.944"/>
+</kw>
+<kw name="Insert Hero via Rest Call" library="Common">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>birthday=01012005</arg>
+<arg>gender=M</arg>
+<arg>name=Hans</arg>
+<arg>natid=1234567890</arg>
+<arg>salary=50000.00</arg>
+<arg>tax=4000.00</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231125 20:07:51.945" level="INFO">${body} = {'birthday': '01012005', 'gender': 'M', 'name': 'Hans', 'natid': '1234567890', 'salary': '50000.00', 'tax': '4000.00'}</msg>
+<status status="PASS" starttime="20231125 20:07:51.945" endtime="20231125 20:07:51.945"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/insert</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:07:51.951" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+ path_url=/calculator/insert 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '118', 'Content-Type': 'application/json'} 
+ body=b'{"birthday": "01012005", "gender": "M", "name": "Hans", "natid": "1234567890", "salary": "50000.00", "tax": "4000.00"}' 
+ </msg>
+<msg timestamp="20231125 20:07:51.951" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+ status=202, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '7', 'Date': 'Sat, 25 Nov 2023 12:07:51 GMT'} 
+ body=Alright 
+ </msg>
+<msg timestamp="20231125 20:07:51.952" level="INFO">${response} = &lt;Response [202]&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:51.945" endtime="20231125 20:07:51.952"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:07:51.952" endtime="20231125 20:07:51.952"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:51.944" endtime="20231125 20:07:51.952"/>
+</kw>
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:51.955" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:51.954" endtime="20231125 20:07:53.629"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:51.954" endtime="20231125 20:07:53.629"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:53.629" endtime="20231125 20:07:53.643"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:53.629" endtime="20231125 20:07:53.643"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:51.953" endtime="20231125 20:07:53.643"/>
+</kw>
+<kw name="Click 'Refresh Tax Relief Table' button" library="Oppen">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:53.644" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:07:53.644" endtime="20231125 20:07:53.720"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:53.643" endtime="20231125 20:07:53.720"/>
+</kw>
+<kw name="Verify Tax Relief is calculated correctly" library="Oppen">
+<kw name="Get Number of heros" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRows}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:07:53.739" level="INFO">${countRows} = 1</msg>
+<status status="PASS" starttime="20231125 20:07:53.722" endtime="20231125 20:07:53.739"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${countRows}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:07:53.740" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:53.740" endtime="20231125 20:07:53.740"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:53.722" endtime="20231125 20:07:53.740"/>
+</kw>
+<kw name="Check taxRelief is calulated correctly" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${taxRelief}</var>
+<arg>${Table_data_Relief}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:53.769" level="INFO">${taxRelief} = 46000.00</msg>
+<status status="PASS" starttime="20231125 20:07:53.741" endtime="20231125 20:07:53.769"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${taxReliefExpected}</var>
+<arg>((50000.00 - 4000.00) * 1) + 0</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:07:53.769" level="INFO">${taxReliefExpected} = 46000.0</msg>
+<status status="PASS" starttime="20231125 20:07:53.769" endtime="20231125 20:07:53.769"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${taxRelief}</arg>
+<arg>${taxReliefExpected}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:07:53.770" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:53.769" endtime="20231125 20:07:53.770"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:53.740" endtime="20231125 20:07:53.770"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:53.721" endtime="20231125 20:07:53.770"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:07:53.771" endtime="20231125 20:07:55.884"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:53.771" endtime="20231125 20:07:55.884"/>
+</kw>
+<doc>AC3-computation of the tax relief is using the formula as described</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:07:51.936" endtime="20231125 20:07:55.885"/>
+</test>
+<test id="s1-s4-t5" name="Tax Relief should be correct if Female Hero is under 35" line="52">
+<kw name="Delete All Heroes via Rest Call" library="Common">
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/rakeDatabase</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:07:55.894" level="INFO">POST Request : url=http://localhost:8080/calculator/rakeDatabase 
+ path_url=/calculator/rakeDatabase 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20231125 20:07:55.894" level="INFO">POST Response : url=http://localhost:8080/calculator/rakeDatabase 
+ status=200, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '21', 'Date': 'Sat, 25 Nov 2023 12:07:55 GMT'} 
+ body=Successfully raked DB 
+ </msg>
+<msg timestamp="20231125 20:07:55.894" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:55.888" endtime="20231125 20:07:55.894"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:07:55.894" endtime="20231125 20:07:55.895"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:55.887" endtime="20231125 20:07:55.895"/>
+</kw>
+<kw name="Insert Female35 Hero via Rest Call" library="Common">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>birthday=01011988</arg>
+<arg>gender=F</arg>
+<arg>name=Natasha</arg>
+<arg>natid=1234567890</arg>
+<arg>salary=50000.00</arg>
+<arg>tax=4000.00</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231125 20:07:55.897" level="INFO">${body} = {'birthday': '01011988', 'gender': 'F', 'name': 'Natasha', 'natid': '1234567890', 'salary': '50000.00', 'tax': '4000.00'}</msg>
+<status status="PASS" starttime="20231125 20:07:55.897" endtime="20231125 20:07:55.897"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/insert</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:07:55.903" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+ path_url=/calculator/insert 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '121', 'Content-Type': 'application/json'} 
+ body=b'{"birthday": "01011988", "gender": "F", "name": "Natasha", "natid": "1234567890", "salary": "50000.00", "tax": "4000.00"}' 
+ </msg>
+<msg timestamp="20231125 20:07:55.904" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+ status=202, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '7', 'Date': 'Sat, 25 Nov 2023 12:07:55 GMT'} 
+ body=Alright 
+ </msg>
+<msg timestamp="20231125 20:07:55.904" level="INFO">${response} = &lt;Response [202]&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:55.897" endtime="20231125 20:07:55.904"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:07:55.904" endtime="20231125 20:07:55.904"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:55.896" endtime="20231125 20:07:55.905"/>
+</kw>
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:55.907" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:55.906" endtime="20231125 20:07:57.587"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:55.906" endtime="20231125 20:07:57.588"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:07:57.588" endtime="20231125 20:07:57.606"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:57.588" endtime="20231125 20:07:57.607"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:55.905" endtime="20231125 20:07:57.607"/>
+</kw>
+<kw name="Click 'Refresh Tax Relief Table' button" library="Oppen">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:57.608" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:07:57.607" endtime="20231125 20:07:57.676"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:57.607" endtime="20231125 20:07:57.676"/>
+</kw>
+<kw name="Verify Female35 Tax Relief is calculated correctly" library="Oppen">
+<kw name="Get Number of heros" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRows}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:07:57.696" level="INFO">${countRows} = 1</msg>
+<status status="PASS" starttime="20231125 20:07:57.678" endtime="20231125 20:07:57.696"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${countRows}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:07:57.697" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:57.696" endtime="20231125 20:07:57.697"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:57.677" endtime="20231125 20:07:57.697"/>
+</kw>
+<kw name="Check Female35 taxRelief is calulated correctly" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${taxRelief}</var>
+<arg>${Table_data_Relief}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:07:57.725" level="INFO">${taxRelief} = 37300.00</msg>
+<status status="PASS" starttime="20231125 20:07:57.697" endtime="20231125 20:07:57.725"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${taxReliefExpected}</var>
+<arg>((50000.00 - 4000.00) * 0.8) + 500</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:07:57.725" level="INFO">${taxReliefExpected} = 37300.0</msg>
+<status status="PASS" starttime="20231125 20:07:57.725" endtime="20231125 20:07:57.726"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${taxRelief}</arg>
+<arg>${taxReliefExpected}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:07:57.726" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:57.726" endtime="20231125 20:07:57.726"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:57.697" endtime="20231125 20:07:57.726"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:57.677" endtime="20231125 20:07:57.726"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:07:57.727" endtime="20231125 20:07:59.832"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:57.727" endtime="20231125 20:07:59.832"/>
+</kw>
+<doc>AC3-computation of the tax relief is using the formula as described</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:07:55.887" endtime="20231125 20:07:59.832"/>
+</test>
+<test id="s1-s4-t6" name="Tax Relief should be correct if Male Hero is under 50" line="62">
+<kw name="Delete All Heroes via Rest Call" library="Common">
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/rakeDatabase</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:07:59.841" level="INFO">POST Request : url=http://localhost:8080/calculator/rakeDatabase 
+ path_url=/calculator/rakeDatabase 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20231125 20:07:59.841" level="INFO">POST Response : url=http://localhost:8080/calculator/rakeDatabase 
+ status=200, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '21', 'Date': 'Sat, 25 Nov 2023 12:07:59 GMT'} 
+ body=Successfully raked DB 
+ </msg>
+<msg timestamp="20231125 20:07:59.842" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:59.835" endtime="20231125 20:07:59.842"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:07:59.842" endtime="20231125 20:07:59.842"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:59.835" endtime="20231125 20:07:59.842"/>
+</kw>
+<kw name="Insert Male50 Hero via Rest Call" library="Common">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>birthday=01011973</arg>
+<arg>gender=M</arg>
+<arg>name=Clint Barton</arg>
+<arg>natid=1234567890</arg>
+<arg>salary=50000.00</arg>
+<arg>tax=4000.00</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231125 20:07:59.845" level="INFO">${body} = {'birthday': '01011973', 'gender': 'M', 'name': 'Clint Barton', 'natid': '1234567890', 'salary': '50000.00', 'tax': '4000.00'}</msg>
+<status status="PASS" starttime="20231125 20:07:59.844" endtime="20231125 20:07:59.845"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/insert</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:07:59.853" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+ path_url=/calculator/insert 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '126', 'Content-Type': 'application/json'} 
+ body=b'{"birthday": "01011973", "gender": "M", "name": "Clint Barton", "natid": "1234567890", "salary": "50000.00", "tax": "4000.00"}' 
+ </msg>
+<msg timestamp="20231125 20:07:59.854" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+ status=202, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '7', 'Date': 'Sat, 25 Nov 2023 12:07:59 GMT'} 
+ body=Alright 
+ </msg>
+<msg timestamp="20231125 20:07:59.854" level="INFO">${response} = &lt;Response [202]&gt;</msg>
+<status status="PASS" starttime="20231125 20:07:59.846" endtime="20231125 20:07:59.854"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:07:59.854" endtime="20231125 20:07:59.854"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:59.844" endtime="20231125 20:07:59.854"/>
+</kw>
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:07:59.857" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:07:59.856" endtime="20231125 20:08:01.562"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:59.856" endtime="20231125 20:08:01.562"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:08:01.563" endtime="20231125 20:08:01.581"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:01.563" endtime="20231125 20:08:01.582"/>
+</kw>
+<status status="PASS" starttime="20231125 20:07:59.855" endtime="20231125 20:08:01.582"/>
+</kw>
+<kw name="Click 'Refresh Tax Relief Table' button" library="Oppen">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:01.583" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:08:01.583" endtime="20231125 20:08:01.656"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:01.582" endtime="20231125 20:08:01.656"/>
+</kw>
+<kw name="Verify Male50 Tax Relief is calculated correctly" library="Oppen">
+<kw name="Get Number of heros" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRows}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:08:01.679" level="INFO">${countRows} = 1</msg>
+<status status="PASS" starttime="20231125 20:08:01.660" endtime="20231125 20:08:01.679"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${countRows}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:08:01.680" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:01.679" endtime="20231125 20:08:01.680"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:01.660" endtime="20231125 20:08:01.680"/>
+</kw>
+<kw name="Check Male50 taxRelief is calulated correctly" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${taxRelief}</var>
+<arg>${Table_data_Relief}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:01.705" level="INFO">${taxRelief} = 23000.00</msg>
+<status status="PASS" starttime="20231125 20:08:01.680" endtime="20231125 20:08:01.705"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${taxReliefExpected}</var>
+<arg>((50000.00 - 4000.00) * 0.5) + 0</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:08:01.706" level="INFO">${taxReliefExpected} = 23000.0</msg>
+<status status="PASS" starttime="20231125 20:08:01.705" endtime="20231125 20:08:01.706"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${taxRelief}</arg>
+<arg>${taxReliefExpected}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:08:01.706" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:01.706" endtime="20231125 20:08:01.707"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:01.680" endtime="20231125 20:08:01.707"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:01.659" endtime="20231125 20:08:01.707"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:08:01.708" endtime="20231125 20:08:03.802"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:01.707" endtime="20231125 20:08:03.802"/>
+</kw>
+<doc>AC3-computation of the tax relief is using the formula as described</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:07:59.834" endtime="20231125 20:08:03.803"/>
+</test>
+<test id="s1-s4-t7" name="Tax Relief should be correct if Female Hero is under 75" line="72">
+<kw name="Delete All Heroes via Rest Call" library="Common">
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/rakeDatabase</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:08:03.810" level="INFO">POST Request : url=http://localhost:8080/calculator/rakeDatabase 
+ path_url=/calculator/rakeDatabase 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20231125 20:08:03.810" level="INFO">POST Response : url=http://localhost:8080/calculator/rakeDatabase 
+ status=200, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '21', 'Date': 'Sat, 25 Nov 2023 12:08:03 GMT'} 
+ body=Successfully raked DB 
+ </msg>
+<msg timestamp="20231125 20:08:03.810" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:03.805" endtime="20231125 20:08:03.810"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:08:03.811" endtime="20231125 20:08:03.811"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:03.805" endtime="20231125 20:08:03.812"/>
+</kw>
+<kw name="Insert Female75 Hero via Rest Call" library="Common">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>birthday=01011948</arg>
+<arg>gender=F</arg>
+<arg>name=Penny</arg>
+<arg>natid=1234567890</arg>
+<arg>salary=50000.00</arg>
+<arg>tax=4000.00</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231125 20:08:03.814" level="INFO">${body} = {'birthday': '01011948', 'gender': 'F', 'name': 'Penny', 'natid': '1234567890', 'salary': '50000.00', 'tax': '4000.00'}</msg>
+<status status="PASS" starttime="20231125 20:08:03.813" endtime="20231125 20:08:03.814"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/insert</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:08:03.821" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+ path_url=/calculator/insert 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '119', 'Content-Type': 'application/json'} 
+ body=b'{"birthday": "01011948", "gender": "F", "name": "Penny", "natid": "1234567890", "salary": "50000.00", "tax": "4000.00"}' 
+ </msg>
+<msg timestamp="20231125 20:08:03.821" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+ status=202, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '7', 'Date': 'Sat, 25 Nov 2023 12:08:03 GMT'} 
+ body=Alright 
+ </msg>
+<msg timestamp="20231125 20:08:03.821" level="INFO">${response} = &lt;Response [202]&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:03.814" endtime="20231125 20:08:03.822"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:08:03.822" endtime="20231125 20:08:03.822"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:03.813" endtime="20231125 20:08:03.822"/>
+</kw>
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:08:03.824" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:08:03.824" endtime="20231125 20:08:05.531"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:03.823" endtime="20231125 20:08:05.531"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:08:05.532" endtime="20231125 20:08:05.548"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:05.531" endtime="20231125 20:08:05.549"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:03.823" endtime="20231125 20:08:05.549"/>
+</kw>
+<kw name="Click 'Refresh Tax Relief Table' button" library="Oppen">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:05.551" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:08:05.551" endtime="20231125 20:08:05.620"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:05.550" endtime="20231125 20:08:05.620"/>
+</kw>
+<kw name="Verify Female75 Tax Relief is calculated correctly" library="Oppen">
+<kw name="Get Number of heros" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRows}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:08:05.639" level="INFO">${countRows} = 1</msg>
+<status status="PASS" starttime="20231125 20:08:05.622" endtime="20231125 20:08:05.639"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${countRows}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:08:05.640" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:05.639" endtime="20231125 20:08:05.640"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:05.622" endtime="20231125 20:08:05.640"/>
+</kw>
+<kw name="Check Female75 taxRelief is calulated correctly" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${taxRelief}</var>
+<arg>${Table_data_Relief}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:05.666" level="INFO">${taxRelief} = 17382.00</msg>
+<status status="PASS" starttime="20231125 20:08:05.641" endtime="20231125 20:08:05.666"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${taxReliefExpected}</var>
+<arg>((50000.00 - 4000.00) * 0.367) + 500</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:08:05.667" level="INFO">${taxReliefExpected} = 17382.0</msg>
+<status status="PASS" starttime="20231125 20:08:05.666" endtime="20231125 20:08:05.667"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${taxRelief}</arg>
+<arg>${taxReliefExpected}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:08:05.667" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:05.667" endtime="20231125 20:08:05.667"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:05.640" endtime="20231125 20:08:05.667"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:05.621" endtime="20231125 20:08:05.667"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:08:05.668" endtime="20231125 20:08:07.766"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:05.668" endtime="20231125 20:08:07.766"/>
+</kw>
+<doc>AC3-computation of the tax relief is using the formula as described</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:08:03.804" endtime="20231125 20:08:07.767"/>
+</test>
+<test id="s1-s4-t8" name="Tax Relief should be correct if Male Hero is 76" line="82">
+<kw name="Delete All Heroes via Rest Call" library="Common">
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/rakeDatabase</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:08:07.776" level="INFO">POST Request : url=http://localhost:8080/calculator/rakeDatabase 
+ path_url=/calculator/rakeDatabase 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20231125 20:08:07.776" level="INFO">POST Response : url=http://localhost:8080/calculator/rakeDatabase 
+ status=200, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '21', 'Date': 'Sat, 25 Nov 2023 12:08:07 GMT'} 
+ body=Successfully raked DB 
+ </msg>
+<msg timestamp="20231125 20:08:07.776" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:07.770" endtime="20231125 20:08:07.776"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:08:07.776" endtime="20231125 20:08:07.777"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:07.770" endtime="20231125 20:08:07.777"/>
+</kw>
+<kw name="Insert Male76 Hero via Rest Call" library="Common">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>birthday=01011947</arg>
+<arg>gender=M</arg>
+<arg>name=Steve Rogers</arg>
+<arg>natid=1234567890</arg>
+<arg>salary=50000.00</arg>
+<arg>tax=4000.00</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231125 20:08:07.779" level="INFO">${body} = {'birthday': '01011947', 'gender': 'M', 'name': 'Steve Rogers', 'natid': '1234567890', 'salary': '50000.00', 'tax': '4000.00'}</msg>
+<status status="PASS" starttime="20231125 20:08:07.779" endtime="20231125 20:08:07.779"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/insert</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:08:07.785" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+ path_url=/calculator/insert 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '126', 'Content-Type': 'application/json'} 
+ body=b'{"birthday": "01011947", "gender": "M", "name": "Steve Rogers", "natid": "1234567890", "salary": "50000.00", "tax": "4000.00"}' 
+ </msg>
+<msg timestamp="20231125 20:08:07.785" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+ status=202, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '7', 'Date': 'Sat, 25 Nov 2023 12:08:07 GMT'} 
+ body=Alright 
+ </msg>
+<msg timestamp="20231125 20:08:07.785" level="INFO">${response} = &lt;Response [202]&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:07.780" endtime="20231125 20:08:07.785"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:08:07.786" endtime="20231125 20:08:07.786"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:07.778" endtime="20231125 20:08:07.786"/>
+</kw>
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:08:07.788" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:08:07.787" endtime="20231125 20:08:09.475"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:07.787" endtime="20231125 20:08:09.475"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:08:09.475" endtime="20231125 20:08:09.490"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:09.475" endtime="20231125 20:08:09.490"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:07.787" endtime="20231125 20:08:09.490"/>
+</kw>
+<kw name="Click 'Refresh Tax Relief Table' button" library="Oppen">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:09.492" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:08:09.491" endtime="20231125 20:08:09.559"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:09.491" endtime="20231125 20:08:09.559"/>
+</kw>
+<kw name="Verify Male76 Tax Relief is calculated correctly" library="Oppen">
+<kw name="Get Number of heros" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRows}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:08:09.577" level="INFO">${countRows} = 1</msg>
+<status status="PASS" starttime="20231125 20:08:09.561" endtime="20231125 20:08:09.577"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${countRows}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:08:09.577" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:09.577" endtime="20231125 20:08:09.577"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:09.560" endtime="20231125 20:08:09.577"/>
+</kw>
+<kw name="Check Male76 taxRelief is calulated correctly" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${taxRelief}</var>
+<arg>${Table_data_Relief}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:09.605" level="INFO">${taxRelief} = 2300.00</msg>
+<status status="PASS" starttime="20231125 20:08:09.578" endtime="20231125 20:08:09.605"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${taxReliefExpected}</var>
+<arg>((50000.00 - 4000.00) * 0.05) + 0</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:08:09.605" level="INFO">${taxReliefExpected} = 2300.0</msg>
+<status status="PASS" starttime="20231125 20:08:09.605" endtime="20231125 20:08:09.605"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${taxRelief}</arg>
+<arg>${taxReliefExpected}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:08:09.607" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:09.605" endtime="20231125 20:08:09.607"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:09.578" endtime="20231125 20:08:09.607"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:09.560" endtime="20231125 20:08:09.607"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:08:09.608" endtime="20231125 20:08:11.700"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:09.608" endtime="20231125 20:08:11.700"/>
+</kw>
+<doc>AC3-computation of the tax relief is using the formula as described</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:08:07.769" endtime="20231125 20:08:11.701"/>
+</test>
+<test id="s1-s4-t9" name="Tax Relief should be rounded 50.00 if tax relief less than 50" line="92">
+<kw name="Delete All Heroes via Rest Call" library="Common">
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/rakeDatabase</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:08:11.710" level="INFO">POST Request : url=http://localhost:8080/calculator/rakeDatabase 
+ path_url=/calculator/rakeDatabase 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20231125 20:08:11.710" level="INFO">POST Response : url=http://localhost:8080/calculator/rakeDatabase 
+ status=200, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '21', 'Date': 'Sat, 25 Nov 2023 12:08:11 GMT'} 
+ body=Successfully raked DB 
+ </msg>
+<msg timestamp="20231125 20:08:11.710" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:11.705" endtime="20231125 20:08:11.711"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:08:11.711" endtime="20231125 20:08:11.711"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:11.704" endtime="20231125 20:08:11.712"/>
+</kw>
+<kw name="Insert Pioneer Hero via Rest Call" library="Common">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>birthday=01011949</arg>
+<arg>gender=M</arg>
+<arg>name=Darth Vader</arg>
+<arg>natid=1234567890</arg>
+<arg>salary=134.60</arg>
+<arg>tax=0.00</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231125 20:08:11.713" level="INFO">${body} = {'birthday': '01011949', 'gender': 'M', 'name': 'Darth Vader', 'natid': '1234567890', 'salary': '134.60', 'tax': '0.00'}</msg>
+<status status="PASS" starttime="20231125 20:08:11.713" endtime="20231125 20:08:11.714"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/insert</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:08:11.720" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+ path_url=/calculator/insert 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '120', 'Content-Type': 'application/json'} 
+ body=b'{"birthday": "01011949", "gender": "M", "name": "Darth Vader", "natid": "1234567890", "salary": "134.60", "tax": "0.00"}' 
+ </msg>
+<msg timestamp="20231125 20:08:11.720" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+ status=202, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '7', 'Date': 'Sat, 25 Nov 2023 12:08:11 GMT'} 
+ body=Alright 
+ </msg>
+<msg timestamp="20231125 20:08:11.720" level="INFO">${response} = &lt;Response [202]&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:11.714" endtime="20231125 20:08:11.720"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:08:11.720" endtime="20231125 20:08:11.721"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:11.712" endtime="20231125 20:08:11.721"/>
+</kw>
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:08:11.723" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:08:11.723" endtime="20231125 20:08:13.497"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:11.722" endtime="20231125 20:08:13.497"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:08:13.497" endtime="20231125 20:08:13.513"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:13.497" endtime="20231125 20:08:13.513"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:11.722" endtime="20231125 20:08:13.513"/>
+</kw>
+<kw name="Click 'Refresh Tax Relief Table' button" library="Oppen">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:13.514" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:08:13.514" endtime="20231125 20:08:13.583"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:13.513" endtime="20231125 20:08:13.583"/>
+</kw>
+<kw name="Verify Pioneer Tax Relief is calculated correctly" library="Oppen">
+<kw name="Get Number of heros" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRows}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:08:13.602" level="INFO">${countRows} = 1</msg>
+<status status="PASS" starttime="20231125 20:08:13.585" endtime="20231125 20:08:13.602"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${countRows}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:08:13.602" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:13.602" endtime="20231125 20:08:13.602"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:13.585" endtime="20231125 20:08:13.602"/>
+</kw>
+<kw name="Check Pioneer taxRelief is calulated correctly" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${taxRelief}</var>
+<arg>${Table_data_Relief}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:13.629" level="INFO">${taxRelief} = 50.00</msg>
+<status status="PASS" starttime="20231125 20:08:13.603" endtime="20231125 20:08:13.629"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${taxReliefExpected}</var>
+<arg>50.00</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:08:13.630" level="INFO">${taxReliefExpected} = 50.0</msg>
+<status status="PASS" starttime="20231125 20:08:13.629" endtime="20231125 20:08:13.630"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:13.602" endtime="20231125 20:08:13.630"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:13.584" endtime="20231125 20:08:13.630"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:08:13.631" endtime="20231125 20:08:15.730"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:13.630" endtime="20231125 20:08:15.731"/>
+</kw>
+<doc>AC5-If the calculated tax relief amount after subjecting to normal rounding rule is more than 0.00 but less than 50.00, the final taxrelief amount should be 50.00</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:08:11.703" endtime="20231125 20:08:15.731"/>
+</test>
+<test id="s1-s4-t10" name="Tax Relief should be rounded 2 decimal places" line="103">
+<kw name="Delete All Heroes via Rest Call" library="Common">
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/rakeDatabase</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:08:15.741" level="INFO">POST Request : url=http://localhost:8080/calculator/rakeDatabase 
+ path_url=/calculator/rakeDatabase 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20231125 20:08:15.741" level="INFO">POST Response : url=http://localhost:8080/calculator/rakeDatabase 
+ status=200, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '21', 'Date': 'Sat, 25 Nov 2023 12:08:15 GMT'} 
+ body=Successfully raked DB 
+ </msg>
+<msg timestamp="20231125 20:08:15.741" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:15.735" endtime="20231125 20:08:15.741"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:08:15.741" endtime="20231125 20:08:15.742"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:15.735" endtime="20231125 20:08:15.742"/>
+</kw>
+<kw name="Insert Rounding Hero via Rest Call" library="Common">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>birthday=01011949</arg>
+<arg>gender=M</arg>
+<arg>name=Nameless Swordman</arg>
+<arg>natid=1234567890</arg>
+<arg>salary=12135.00</arg>
+<arg>tax=0.00</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231125 20:08:15.746" level="INFO">${body} = {'birthday': '01011949', 'gender': 'M', 'name': 'Nameless Swordman', 'natid': '1234567890', 'salary': '12135.00', 'tax': '0.00'}</msg>
+<status status="PASS" starttime="20231125 20:08:15.744" endtime="20231125 20:08:15.746"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=http://localhost:8080/calculator/insert</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20231125 20:08:15.754" level="INFO">POST Request : url=http://localhost:8080/calculator/insert 
+ path_url=/calculator/insert 
+ headers={'User-Agent': 'python-requests/2.30.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '128', 'Content-Type': 'application/json'} 
+ body=b'{"birthday": "01011949", "gender": "M", "name": "Nameless Swordman", "natid": "1234567890", "salary": "12135.00", "tax": "0.00"}' 
+ </msg>
+<msg timestamp="20231125 20:08:15.754" level="INFO">POST Response : url=http://localhost:8080/calculator/insert 
+ status=202, reason= 
+ headers={'Content-Type': 'text/plain;charset=UTF-8', 'Content-Length': '7', 'Date': 'Sat, 25 Nov 2023 12:08:15 GMT'} 
+ body=Alright 
+ </msg>
+<msg timestamp="20231125 20:08:15.754" level="INFO">${response} = &lt;Response [202]&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:15.747" endtime="20231125 20:08:15.754"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 20:08:15.755" endtime="20231125 20:08:15.755"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:15.743" endtime="20231125 20:08:15.755"/>
+</kw>
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:08:15.757" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:08:15.757" endtime="20231125 20:08:17.447"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:15.756" endtime="20231125 20:08:17.447"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:08:17.448" endtime="20231125 20:08:17.467"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:17.447" endtime="20231125 20:08:17.467"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:15.756" endtime="20231125 20:08:17.467"/>
+</kw>
+<kw name="Click 'Refresh Tax Relief Table' button" library="Oppen">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Refresh Tax Relief Table</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:17.468" level="INFO">Clicking button 'Refresh Tax Relief Table'.</msg>
+<status status="PASS" starttime="20231125 20:08:17.468" endtime="20231125 20:08:17.536"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:17.467" endtime="20231125 20:08:17.536"/>
+</kw>
+<kw name="Verify Rounding Tax Relief is calculated correctly" library="Oppen">
+<kw name="Get Number of heros" library="LandingPage">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRows}</var>
+<arg>${TaxRelief_Table}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20231125 20:08:17.553" level="INFO">${countRows} = 1</msg>
+<status status="PASS" starttime="20231125 20:08:17.538" endtime="20231125 20:08:17.553"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${countRows}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:08:17.553" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:17.553" endtime="20231125 20:08:17.553"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:17.537" endtime="20231125 20:08:17.553"/>
+</kw>
+<kw name="Check Rounding taxRelief is calulated correctly" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${taxRelief}</var>
+<arg>${Table_data_Relief}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:17.577" level="INFO">${taxRelief} = 4453.55</msg>
+<status status="PASS" starttime="20231125 20:08:17.554" endtime="20231125 20:08:17.577"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${taxReliefExpected}</var>
+<arg>4453.55</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231125 20:08:17.578" level="INFO">${taxReliefExpected} = 4453.55</msg>
+<status status="PASS" starttime="20231125 20:08:17.578" endtime="20231125 20:08:17.578"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${taxRelief}</arg>
+<arg>${taxReliefExpected}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20231125 20:08:17.579" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:17.578" endtime="20231125 20:08:17.579"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:17.554" endtime="20231125 20:08:17.579"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:17.537" endtime="20231125 20:08:17.580"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:08:17.580" endtime="20231125 20:08:19.668"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:17.580" endtime="20231125 20:08:19.668"/>
+</kw>
+<doc>AC-6 If the calculated tax relief amount before applying the normal rounding rule gives a value with more than 2 decimal places, it should be truncated at the second decimal place and then subjected to normal rounding rule</doc>
+<tag>functional</tag>
+<status status="PASS" starttime="20231125 20:08:15.733" endtime="20231125 20:08:19.669"/>
+</test>
+<doc>As the Bookkeeper, I should be able to query the amount of tax relief for each person in the database so that I can report the figures to my Bookkeeping Manager</doc>
+<status status="PASS" starttime="20231125 20:07:38.111" endtime="20231125 20:08:19.670"/>
+</suite>
+<suite id="s1-s5" name="TestOppenStory5" source="C:\Users\jeann\PycharmProjects\testOppen\Tests\TestOppenStory5.robot">
+<test id="s1-s5-t1" name="Dispense Now Button on Landing Page should be Red" line="13">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:08:19.699" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:08:19.698" endtime="20231125 20:08:21.511"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:19.697" endtime="20231125 20:08:21.511"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:08:21.512" endtime="20231125 20:08:21.526"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:21.511" endtime="20231125 20:08:21.527"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:19.697" endtime="20231125 20:08:21.527"/>
+</kw>
+<kw name="Verify 'Dispense Now' button is red" library="Oppen">
+<kw name="Get colour of the button" library="LandingPage">
+<kw name="Get CSS Property Value" library="LandingPage">
+<var>${colour}</var>
+<arg>${Dispense_Button}</arg>
+<arg>background-color</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${css}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20231125 20:08:21.541" level="INFO">${css} = &lt;selenium.webdriver.remote.webelement.WebElement (session="30db67ed7c44c0e5b14ab6177bcdb110", element="F674C499041A14DDEC1C809B6C8A721A_element_8")&gt;</msg>
+<status status="PASS" starttime="20231125 20:08:21.528" endtime="20231125 20:08:21.541"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<var>${prop_val}</var>
+<arg>${css}</arg>
+<arg>value_of_css_property</arg>
+<arg>${attribute name}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20231125 20:08:21.553" level="INFO">${prop_val} = rgba(220, 53, 69, 1)</msg>
+<status status="PASS" starttime="20231125 20:08:21.541" endtime="20231125 20:08:21.553"/>
+</kw>
+<msg timestamp="20231125 20:08:21.553" level="INFO">${colour} = rgba(220, 53, 69, 1)</msg>
+<status status="PASS" starttime="20231125 20:08:21.528" endtime="20231125 20:08:21.553"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${colour}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:08:21.553" level="INFO">${colour} = rgba(220, 53, 69, 1)</msg>
+<status status="PASS" starttime="20231125 20:08:21.553" endtime="20231125 20:08:21.553"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:21.527" endtime="20231125 20:08:21.554"/>
+</kw>
+<kw name="Sparse the rbga value" library="LandingPage">
+<kw name="Get Substring" library="String">
+<var>${endcolour}</var>
+<arg>${colour}</arg>
+<arg>5</arg>
+<arg>-1</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20231125 20:08:21.554" level="INFO">${endcolour} = 220, 53, 69, 1</msg>
+<status status="PASS" starttime="20231125 20:08:21.554" endtime="20231125 20:08:21.554"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{rbga}</var>
+<arg>${endcolour}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20231125 20:08:21.555" level="INFO">@{rbga} = [ 220 |  53 |  69 |  1 ]</msg>
+<status status="PASS" starttime="20231125 20:08:21.554" endtime="20231125 20:08:21.555"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>@{rbga}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:08:21.555" level="INFO">@{rbga} = [ 220 |  53 |  69 |  1 ]</msg>
+<status status="PASS" starttime="20231125 20:08:21.555" endtime="20231125 20:08:21.555"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:21.554" endtime="20231125 20:08:21.555"/>
+</kw>
+<kw name="Verify that the button is red" library="LandingPage">
+<kw name="Should Be True" library="BuiltIn">
+<arg>${rbga[0]} &gt; 200</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20231125 20:08:21.556" endtime="20231125 20:08:21.557"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${rbga[1]} &lt; 80</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20231125 20:08:21.557" endtime="20231125 20:08:21.558"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${rbga[2]} &lt; 80</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20231125 20:08:21.558" endtime="20231125 20:08:21.559"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:21.556" endtime="20231125 20:08:21.559"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:21.527" endtime="20231125 20:08:21.559"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:08:21.560" endtime="20231125 20:08:24.673"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:21.559" endtime="20231125 20:08:24.673"/>
+</kw>
+<doc>AC1-The button on the screen must be red-colored</doc>
+<tag>UI</tag>
+<status status="PASS" starttime="20231125 20:08:19.694" endtime="20231125 20:08:24.674"/>
+</test>
+<test id="s1-s5-t2" name="Text on the button should be exactly “Dispense Now”" line="20">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:08:24.679" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:08:24.678" endtime="20231125 20:08:26.438"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:24.677" endtime="20231125 20:08:26.438"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:08:26.439" endtime="20231125 20:08:26.455"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:26.438" endtime="20231125 20:08:26.455"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:24.677" endtime="20231125 20:08:26.455"/>
+</kw>
+<kw name="Verify text on button is 'Dispense Now'" library="Oppen">
+<kw name="Get text on the 'Dispense Now' button" library="LandingPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${textButton}</var>
+<arg>${Dispense_Button}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:26.486" level="INFO">${textButton} = Dispense Now</msg>
+<status status="PASS" starttime="20231125 20:08:26.456" endtime="20231125 20:08:26.486"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${textButton}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231125 20:08:26.487" level="INFO">${textButton} = Dispense Now</msg>
+<status status="PASS" starttime="20231125 20:08:26.487" endtime="20231125 20:08:26.487"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:26.456" endtime="20231125 20:08:26.487"/>
+</kw>
+<kw name="Check that the text is Dispense Now" library="LandingPage">
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${textButton}</arg>
+<arg>Dispense Now</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231125 20:08:26.488" endtime="20231125 20:08:26.488"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:26.487" endtime="20231125 20:08:26.488"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:26.455" endtime="20231125 20:08:26.488"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:08:26.489" endtime="20231125 20:08:28.599"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:26.488" endtime="20231125 20:08:28.599"/>
+</kw>
+<doc>AC2-The text on the button must be exactly “Dispense Now”</doc>
+<tag>UI</tag>
+<status status="PASS" starttime="20231125 20:08:24.675" endtime="20231125 20:08:28.600"/>
+</test>
+<test id="s1-s5-t3" name="Governor should be directed to “Cash dispensed” page" line="27">
+<kw name="Begin Web Test" library="Common">
+<kw name="Load" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TESTURL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 20:08:28.603" level="INFO">Opening browser 'headlesschrome' to base url 'http://localhost:8080'.</msg>
+<status status="PASS" starttime="20231125 20:08:28.602" endtime="20231125 20:08:30.439"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:28.602" endtime="20231125 20:08:30.439"/>
+</kw>
+<kw name="VerifyPageLoaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>The Oppenheimer Project</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231125 20:08:30.440" endtime="20231125 20:08:30.453"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:30.439" endtime="20231125 20:08:30.454"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:28.602" endtime="20231125 20:08:30.454"/>
+</kw>
+<kw name="Click on 'Dispense Now' button" library="Oppen">
+<kw name="Click on 'Dispense Now'" library="LandingPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Dispense_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231125 20:08:30.455" level="INFO">Clicking element 'xpath=//a[@href='dispense']'.</msg>
+<status status="PASS" starttime="20231125 20:08:30.455" endtime="20231125 20:08:30.717"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:30.454" endtime="20231125 20:08:30.717"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:30.454" endtime="20231125 20:08:30.717"/>
+</kw>
+<kw name="Verify 'Cash dispensed' appears on page" library="Oppen">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Cash dispensed</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231125 20:08:30.732" level="INFO">Current page contains text 'Cash dispensed'.</msg>
+<status status="PASS" starttime="20231125 20:08:30.718" endtime="20231125 20:08:30.732"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:30.717" endtime="20231125 20:08:30.732"/>
+</kw>
+<kw name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 20:08:30.733" endtime="20231125 20:08:32.839"/>
+</kw>
+<status status="PASS" starttime="20231125 20:08:30.733" endtime="20231125 20:08:32.839"/>
+</kw>
+<doc>AC3-After clicking on the button, it should direct me to a page with a text that says “Cash dispensed”</doc>
+<tag>UI2</tag>
+<status status="PASS" starttime="20231125 20:08:28.601" endtime="20231125 20:08:32.841"/>
+</test>
+<doc>As the Governor, I should be able to see a button on the screen so that I can dispense tax relief for my working class heroes</doc>
+<status status="PASS" starttime="20231125 20:08:19.674" endtime="20231125 20:08:32.842"/>
+</suite>
+<status status="PASS" starttime="20231125 20:06:24.135" endtime="20231125 20:08:32.848"/>
+</suite>
+<statistics>
+<total>
+<stat pass="24" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="20" fail="0" skip="0">functional</stat>
+<stat pass="1" fail="0" skip="0">functional2</stat>
+<stat pass="2" fail="0" skip="0">UI</stat>
+<stat pass="1" fail="0" skip="0">UI2</stat>
+</tag>
+<suite>
+<stat pass="24" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="TestOppenStory1">Tests.TestOppenStory1</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="TestOppenStory2">Tests.TestOppenStory2</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s3" name="TestOppenStory3">Tests.TestOppenStory3</stat>
+<stat pass="10" fail="0" skip="0" id="s1-s4" name="TestOppenStory4">Tests.TestOppenStory4</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s5" name="TestOppenStory5">Tests.TestOppenStory5</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
